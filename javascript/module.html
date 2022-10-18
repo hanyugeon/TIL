@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module example</title>
+  </head>
+
+  <body>
+    <script type="module">
+      import { hello } from "./module.js";
+
+      let a = 5;
+      let b = 10;
+      c = a + b;
+
+      hello("Kim");
+
+      // alert(c); // 모듈 스크립트의 경우 엄격모드로 동작하기 때문에 에러발생.
+    </script>
+
+    <script>
+      // 일반 스크립트에서는 참조가 가능하지만
+
+      // 모듈 스크립트(엄격모드)에서는 서로 참조가 불가능하다.
+
+      // 모듈은 단 한번만 평가 된다.
+
+      // 모듈은 지연 실행 된다. (모든 DOM이 만들어진 후에 실행 됨)
+    </script>
+  </body>
+</html>
