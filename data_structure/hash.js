@@ -42,12 +42,61 @@
 
 // Hash Table: JavaScript Array
 // 단 올바른 사용법은 아님
+const tableArray = [];
+tableArray["key"] = 100;
+tableArray["key2"] = "hello";
+console.log(tableArray["key"]);
+tableArray["key"] = 556;
+console.log(tableArray["key"]);
+delete tableArray["key"];
+console.log(tableArray["key"]);
 
 // Hash Table: JavaScript Object
 // 가장 정석적으로 올바른 방법
+const tableObject = {};
+tableObject["key"] = 100;
+tableObject["key2"] = "hello";
+console.log(tableObject["key"]);
+tableObject["key"] = 556;
+console.log(tableObject["key"]);
+delete tableObject["key"];
+console.log(tableObject["key"]);
 
 // Map
 // 다양한 타입을 넣고 싶다면...
 // 편한 메서드 사용가능, 순회 편리
 
 // Set
+
+// 실습
+// // 나의 풀이 는 못품.
+// // 강사님 풀이
+function solution(genre, plays) {
+  // 같은 장르 끼리 묶어야 해요.
+  // 장르내에서 재생순으로 정렬해야 해요. (이때, 배열로 묶는게 좋을것 같음. [plays, index])
+  // 가장 많이 재생된 장르 구해야 해요.
+  // 장르내에서 가장 많이 재생된 2가지 노래 선별 해야 해요.
+  const genrePlayedTable = {};
+}
+
+// // 강사님 풀이
+function solution(genre, plays) {
+  const genreMap = new Map();
+
+  genre
+    .map((genre, index) => [genre, plays[index]])
+    .forEach(([genre, play], index) => {
+      const data = genreMap.get(genre) || { total: 0, songs: [] };
+      genreMap.set(genre, {
+        total: data.total + play,
+        songs: [...data.songs, { play, index }]
+          .sort((a, b) => b.play - a.play)
+          .slice(0, 2),
+      });
+    });
+
+  return [...genreMap.entries()]
+    .sort((a, b) => b[1].total - a[1].total)
+    .flatMap((item) => item[1].songs)
+    .map((song) => song.index);
+}
