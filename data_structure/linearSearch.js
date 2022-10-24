@@ -149,3 +149,33 @@ console.log(tree.has(1));
 
 // 실습 문제
 // 정신이 아득해지네...
+
+// 강사님 풀이
+// 시간복잡도 고민해보기
+// log n 으로 하는게 제일 좋아보임
+// 떠오르는 알고리즘... => 이진 탐색 (ex: up down게임 / 정렬된 배열만 사용 가능)
+// ( 결정문제 = 이진 탐색 = 파라메트릭 서치)
+
+// 최소 1분에서 10억분 * n 사이
+// 처리가능한 입국자 n보다 작다면, 분을 올려야하고,
+// 입국자 n보다 크다면 분을 낮춰야 함.
+function solution(n, times) {
+  const sortedTimes = times.sort((a, b) => a - b); // O(n(log n))
+  let left = 1;
+  let right = sortedTimes[sortedTimes.length - 1] * n;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    // 시간 / 심사시간 = 해당 심사관의 처리 가능한 입국자 수
+    const sum = times.reduce((acc, time) => acc + Math.floor(mid / time), 0);
+    // Math.reduce(): 배열 각 요소에 함수를 실행하고 누적된 값을 출력할 때 용이함.
+
+    if (sum < n) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return left;
+}
