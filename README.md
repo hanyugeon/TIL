@@ -104,3 +104,25 @@
     - 변수명 및 코드구조 수정
     - 불필요한 console.log 삭제
     - substr() -> slice() 수정
+
+## 22.11.01
+
+- 명령형 vs. 선언형 프로그래밍
+
+- ToDoList
+  - 토글 버큰 만들기
+  - 컴포넌트 방식
+    - index.js, App.js, Header, TodoForm, TodoList
+
+## 22.11.02
+
+- TodoList
+
+  - 컴포넌트 방식 (복습)
+  - Client Side에서 데이터 저장법
+  - LocalStorage 적용하기
+
+- 비동기 처리
+
+  - promise
+  - async & await
