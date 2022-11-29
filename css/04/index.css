@@ -1,0 +1,33 @@
+.parent3 {
+  width: 350px;
+  height: 250px;
+  background-color: tomato;
+}
+
+.parent2 {
+  width: 300px;
+  height: 200px;
+  background-color: skyblue;
+  /* 3D */
+  perspective: 300px;
+}
+
+.parent1 {
+  width: 250px;
+  height: 150px;
+  /* absolute와 relative에 관하여... */
+  position: relative;
+  background-color: orange;
+  transform: rotateX(45deg);
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  /* absolute와 relative에 관하여... */
+  position: absolute;
+  /* position: fixed (viewport, 기준으로 parent가 바뀌는지? MDN문서 확인하기.) */
+  right: 0;
+  bottom: 0;
+}
