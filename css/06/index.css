@@ -1,0 +1,33 @@
+/* Flex 1차원 (수평, 수직 정렬을 위한...) */
+/* Grid 2차원*/
+
+/* 블록 div => display: block; 수직으로 쌓임 */
+
+/**
+ * flex: 수직, 가로
+ * inline-flex: 수평, 가로, 글자
+ * flex-direction: 
+ */
+
+.container {
+  border: 4px solid;
+  /* inline의 특징은? 가로로 최대한 좁혀짐.*/
+  display: grid;
+  grid-template-rows: repeat(2, 100px); /* 명시적 */
+  /* fr? grid 에서 많이 사용됨 */
+  grid-template-columns: repeat(2, 1fr); /* 명시적 */
+  grid-auto-rows: 100px; /* 암시적 */
+  grid-auto-columns: 100px; /* 암시적 */
+  /* grid-auto-flow: dense; 정렬할 때 빈공간이 있다면 채워 줌 */
+}
+
+.container .item {
+  border: 2px solid;
+  font-size: 20px;
+  background-color: orange;
+}
+
+/* 아래 코드로 인해 일어나는 일과 그에 대한 순서 생각해보기 */
+.container .item:nth-child(5) {
+  grid-column: 4;
+}
