@@ -33,9 +33,9 @@ export default function PhotoList({ $target, initialState, onScrollEnded }) {
     const isScrollEnded = window.innerHeight + window.scrollY + 100 >= document.body.offsetHeight;
     const isPhotosCountOvered = photos.length >= photosTotalCount;
 
-    if (!isScrollEnded) return console.log(isScrollEnded);
-    if (isLoading) return console.log(isLoading);
-    if (isPhotosCountOvered) return console.log(isPhotosCountOvered);
+    if (!isScrollEnded) return;
+    if (isLoading) return;
+    if (isPhotosCountOvered) return;
 
     onScrollEnded();
   });
