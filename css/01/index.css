@@ -1,0 +1,28 @@
+.container {
+  border: 4px solid;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  border-radius: 10px;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.container .item.four {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+}
+
+.float {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}

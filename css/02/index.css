@@ -1,0 +1,24 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float--left {
+  float: left;
+}
+
+.float--right {
+  float: right;
+}
+
+.container {
+  border: 4px solid;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  font-size: 40px;
+}
