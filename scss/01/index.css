@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+.container .item {
+  flex-glow: 1;
+}
+.container .item > span {
+  color: red;
+}
+.container .item > span:hover {
+  color: blue;
+}
+
+.fs-sm {
+  font-size: 12px;
+}
+.fs-md {
+  font-size: 18px;
+}
+.fs-lg {
+  font-size: 24px;
+}/*# sourceMappingURL=index.css.map */

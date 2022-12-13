@@ -1,0 +1,22 @@
+// 산술 연산자
+// +, -, *, /, %
+
+.box {
+  $a: 20px;
+  width: 100px + 200px;
+  height: 200px - 100px;
+  margin: 16px * 2;
+  opacity: 10 % 3;
+  // 나누기 연산자 3가지 방법
+  top: (20px / 2); // 추천
+  bottom: $a / 2;
+  left: 20px / 2 + 1px;
+  // right: 100% - 50px;  // 단위가 서로 다르면 에러.
+  right: calc(100% - 50px);
+  background-position: 100px 100px;
+  background-size: 200px 200px;
+  background: 100px (100px / 200px) 200px;
+  font-size: 16px;
+  line-height: 32px;
+  font: (16px / 32px) serif;
+}

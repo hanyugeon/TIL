@@ -1,0 +1,40 @@
+// Numbers
+$number1: 1;
+$number2: 0.2;
+$number3: 64px;
+$number4: 4fr;
+
+// String
+$string1: bold;
+$string2: absolute;
+$string3: "assets/images/";
+
+// Colors
+$color1: red;
+$color2: yellowgreen;
+$color3: rgba(0, 0, 0, 255);
+$color4: #ffffff;
+
+// Boolean
+$boolean1: true;
+$boolean2: false;
+
+// Null
+$null: Null;
+
+// Lists
+$list1: (16px, 24px, 32px);
+$list2: 16px, 24px, 32px;
+$list3: 16px 24px 32px;
+$list3: (apple, banana, cherry);
+$list3: apple, banana, cherry;
+
+// Map
+$map1: (
+  key: value,
+);
+$map2: (
+  a: apple,
+  b: banana,
+  c: cherry,
+);

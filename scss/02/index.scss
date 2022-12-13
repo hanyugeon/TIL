@@ -1,0 +1,29 @@
+.container {
+  $sm: 200px;
+  height: $sm;
+  width: $sm;
+  margin: $sm;
+  position: absolute;
+  @at-root .box {
+    width: $sm;
+  }
+}
+
+.container {
+  display: flex;
+  .item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: auto;
+    }
+    font: {
+      size: 21px;
+      weight: bold;
+      family: sans-serif;
+    }
+  }
+}

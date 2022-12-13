@@ -1,0 +1,11 @@
+.box {
+  background-image: url("~assets/images/github.png");
+}
+.box::after {
+  content: "github-logo";
+}
+
+.box-name {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+$name: "github";
+$path: "~assets/images";
+
+.box {
+  background-image: url("#{$path}/#{$name}.png");
+  &::after {
+    content: "#{$name}-logo";
+  }
+}
+
+.box-#{name} {
+  width: 100px;
+  height: 100px;
+}

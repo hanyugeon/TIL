@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  .item {
+    flex-glow: 1;
+    > span {
+      color: red;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+
+.fs {
+  &-sm {
+    font-size: 12px;
+  }
+  &-md {
+    font-size: 18px;
+  }
+  &-lg {
+    font-size: 24px;
+  }
+}
